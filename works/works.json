@@ -7,9 +7,23 @@
       "period": "2026 秋",
       "role": "個人專案",
       "status": "done",
-      "tags": ["meta", "frontend", "ai-agent"],
-      "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-      "links": [{ "label": "GitHub", "url": "https://github.com/bugohhh/portfolio" }]
+      "tags": [
+        "meta",
+        "frontend",
+        "ai-agent"
+      ],
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub Pages"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/bugohhh/portfolio"
+        }
+      ]
     },
     {
       "slug": "phone-reduction-app",
@@ -18,8 +32,12 @@
       "period": "2026 秋 – 至今",
       "role": "畢業專題組員",
       "status": "plan",
-      "tags": ["mobile"],
-      "stack": ["Android"],
+      "tags": [
+        "mobile"
+      ],
+      "stack": [
+        "Android"
+      ],
       "links": []
     },
     {
@@ -29,8 +47,14 @@
       "period": "2026 夏",
       "role": "個人專案",
       "status": "done",
-      "tags": ["ai-agent", "backend"],
-      "stack": ["Python", "Anthropic API"],
+      "tags": [
+        "ai-agent",
+        "backend"
+      ],
+      "stack": [
+        "Python",
+        "Anthropic API"
+      ],
       "links": []
     },
     {
@@ -40,9 +64,22 @@
       "period": "2026 春",
       "role": "組員，負責全端開發與除錯",
       "status": "done",
-      "tags": ["backend", "database"],
-      "stack": ["Spring Boot", "JdbcTemplate", "MySQL", "HTML/CSS/JS"],
-      "links": [{ "label": "GitHub", "url": "https://github.com/bugohhh/DBMS_final" }]
+      "tags": [
+        "backend",
+        "database"
+      ],
+      "stack": [
+        "Spring Boot",
+        "JdbcTemplate",
+        "MySQL",
+        "HTML/CSS/JS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/bugohhh/DBMS_final"
+        }
+      ]
     },
     {
       "slug": "workforce-scheduling",
@@ -51,8 +88,29 @@
       "period": "2026 春",
       "role": "個人作業",
       "status": "done",
-      "tags": ["optimization"],
-      "stack": ["Python", "gurobipy"],
+      "tags": [
+        "optimization"
+      ],
+      "stack": [
+        "Python",
+        "gurobipy"
+      ],
+      "links": []
+    },
+    {
+      "slug": "portfolio-optimization",
+      "title": "投資組合最佳化",
+      "summary": "管理科學作業。用 scipy 求解不同目標報酬下的最小風險投資組合，畫出效率前緣。",
+      "period": "2026 春",
+      "role": "個人作業",
+      "status": "done",
+      "tags": [
+        "optimization"
+      ],
+      "stack": [
+        "Python",
+        "scipy"
+      ],
       "links": []
     },
     {
@@ -62,8 +120,15 @@
       "period": "2026 春",
       "role": "個人專案",
       "status": "done",
-      "tags": ["education", "frontend"],
-      "stack": ["HTML", "CSS", "JavaScript"],
+      "tags": [
+        "education",
+        "frontend"
+      ],
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "links": []
     }
   ]
