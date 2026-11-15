@@ -1,0 +1,212 @@
+/* 作品帖 — 唯一樣式表。顏色只能使用 :root 變數（見 CLAUDE.md §4） */
+:root {
+  --paper: #f6f0e4;
+  --paper-deep: #ede4d3;
+  --ink: #2b2622;
+  --ink-soft: #6b6158;
+  --line: #d9cdb8;
+  --vermilion: #b83a2b;
+  --jade: #3f7a68;
+  --ochre: #b0823a;
+
+  --serif: "Noto Serif TC", "Songti TC", serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --measure: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--paper); }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.85;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, color-mix(in srgb, var(--line) 35%, transparent) 31px 32px),
+    var(--paper);
+}
+
+a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 4px; }
+a:hover { color: var(--vermilion); text-decoration-color: var(--vermilion); }
+
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---------- 頁首 ---------- */
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--line);
+}
+.seal {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  background: var(--vermilion);
+  color: var(--paper);
+  font-size: 1.9rem;
+  font-weight: 700;
+  border-radius: 2px;
+  text-decoration: none;
+  transform: rotate(-3deg);
+}
+.seal:hover { color: var(--paper); }
+.masthead h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.3em; font-weight: 700; }
+.masthead p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+/* ---------- 自我介紹 ---------- */
+.intro {
+  max-width: var(--measure);
+  padding: 2.2rem 0 1rem;
+  font-size: 1.05rem;
+}
+.intro p { margin: 0 0 0.6rem; }
+
+/* ---------- 標籤篩選 ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 1.2rem 0 1.8rem; }
+.chip {
+  font: 0.85rem var(--serif);
+  padding: 0.25rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--vermilion); color: var(--vermilion); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+
+/* ---------- 卡片牆 ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0 0 4rem;
+  list-style: none;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.4rem 1.4rem 1.2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover { background: var(--paper-deep); border-color: var(--ink-soft); color: var(--ink); }
+.card-no {
+  font-size: 0.85rem;
+  color: var(--vermilion);
+  letter-spacing: 0.2em;
+}
+.card h2 { margin: 0.2rem 0 0.4rem; font-size: 1.25rem; line-height: 1.5; }
+.card p { margin: 0 0 1rem; color: var(--ink-soft); font-size: 0.93rem; line-height: 1.75; flex: 1; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--ink-soft); }
+
+.status { font-size: 0.78rem; padding: 0 0.5rem; border: 1px solid currentColor; border-radius: 2px; white-space: nowrap; }
+.status-done { color: var(--jade); }
+.status-wip { color: var(--ochre); }
+.status-plan { color: var(--ink-soft); border-style: dashed; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.8rem 0 0; padding: 0; list-style: none; }
+.tags li { font: 0.72rem var(--mono); color: var(--ink-soft); }
+.tags li::before { content: "#"; color: var(--vermilion); }
+
+.empty { color: var(--ink-soft); padding: 2rem 0; }
+
+/* ---------- 內頁 ---------- */
+.back { display: inline-block; margin: 2rem 0 0; font-size: 0.9rem; color: var(--ink-soft); }
+.work-head { padding: 1.5rem 0 1.5rem; border-bottom: 1px solid var(--line); max-width: var(--measure); }
+.work-head h1 { margin: 0.2rem 0 0.5rem; font-size: 2rem; line-height: 1.4; }
+.work-head .lede { margin: 0; color: var(--ink-soft); font-size: 1.05rem; }
+
+.facts {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.35rem 1rem;
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.2rem;
+  max-width: var(--measure);
+  background: var(--paper-deep);
+  border-left: 3px solid var(--jade);
+  font-size: 0.92rem;
+}
+.facts dt { color: var(--ink-soft); }
+.facts dd { margin: 0; }
+.facts code { font: 0.82rem var(--mono); }
+
+/* Markdown 內文 */
+.prose { max-width: var(--measure); padding: 1rem 0 2rem; }
+.prose h2 {
+  margin: 2.4rem 0 0.8rem;
+  font-size: 1.35rem;
+  padding-left: 0.8rem;
+  border-left: 4px solid var(--vermilion);
+  line-height: 1.4;
+}
+.prose h3 { margin: 1.6rem 0 0.4rem; font-size: 1.08rem; }
+.prose p { margin: 0 0 1rem; }
+.prose ul, .prose ol { margin: 0 0 1rem; padding-left: 1.4rem; }
+.prose li { margin: 0.25rem 0; }
+.prose li::marker { color: var(--vermilion); }
+.prose code { font: 0.86em var(--mono); background: var(--paper-deep); padding: 0.1em 0.35em; border-radius: 2px; }
+.prose pre {
+  margin: 0 0 1.2rem;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 4px;
+  font: 0.84rem/1.65 var(--mono);
+}
+.prose pre code { background: none; padding: 0; color: inherit; }
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 0.6rem 1.1rem;
+  border-left: 3px solid var(--vermilion);
+  background: color-mix(in srgb, var(--vermilion) 6%, var(--paper));
+  color: var(--ink);
+}
+.prose blockquote p { margin: 0; }
+.prose blockquote::before { content: "批注"; display: block; font-size: 0.75rem; color: var(--vermilion); letter-spacing: 0.3em; }
+.prose a { color: var(--jade); }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--measure);
+  padding: 1.5rem 0 4rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.pager a { text-decoration: none; color: var(--ink-soft); }
+.pager a:hover { color: var(--vermilion); }
+.pager .next { margin-left: auto; text-align: right; }
+
+/* ---------- 頁尾 ---------- */
+.footer {
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .masthead { padding-top: 2.2rem; }
+  .masthead h1 { font-size: 1.5rem; }
+  .work-head h1 { font-size: 1.6rem; }
+  .facts { grid-template-columns: 4rem 1fr; }
+  .grid { grid-template-columns: 1fr; }
+}

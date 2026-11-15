@@ -1,0 +1,70 @@
+{
+  "works": [
+    {
+      "slug": "portfolio-site",
+      "title": "作品帖：本站",
+      "summary": "用一份 CLAUDE.md 定義規則，讓 AI 只要新增一個 Markdown 檔就能長出新作品頁的靜態網站。",
+      "period": "2026 秋",
+      "role": "個人專案",
+      "status": "done",
+      "tags": ["meta", "frontend", "ai-agent"],
+      "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/bugohhh/portfolio" }]
+    },
+    {
+      "slug": "phone-reduction-app",
+      "title": "減少手機使用 App",
+      "summary": "畢業專題。針對短影音與手機遊戲，依使用者想戒的程度分級，用不同方法幫助減少手機使用的 Android App。",
+      "period": "2026 秋 – 至今",
+      "role": "畢業專題組員",
+      "status": "plan",
+      "tags": ["mobile"],
+      "stack": ["Android"],
+      "links": []
+    },
+    {
+      "slug": "mini-coding-agent",
+      "title": "迷你 Coding Agent",
+      "summary": "用 Python 從零寫出一個能讀寫檔案、執行指令的 coding agent，拆解 agent loop 的運作方式。",
+      "period": "2026 夏",
+      "role": "個人專案",
+      "status": "done",
+      "tags": ["ai-agent", "backend"],
+      "stack": ["Python", "Anthropic API"],
+      "links": []
+    },
+    {
+      "slug": "smart-vending-machine",
+      "title": "智慧販賣機管理系統",
+      "summary": "資料庫管理課期末專案。三種角色的販賣機管理系統，實作交易回復、並行控制與安全機制。",
+      "period": "2026 春",
+      "role": "組員，負責全端開發與除錯",
+      "status": "done",
+      "tags": ["backend", "database"],
+      "stack": ["Spring Boot", "JdbcTemplate", "MySQL", "HTML/CSS/JS"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/bugohhh/DBMS_final" }]
+    },
+    {
+      "slug": "workforce-scheduling",
+      "title": "人力排班最佳化模型",
+      "summary": "管理科學作業。把公司人力配置問題寫成整數規劃模型，再用 gurobipy 求出最低成本的排班方案。",
+      "period": "2026 春",
+      "role": "個人作業",
+      "status": "done",
+      "tags": ["optimization"],
+      "stack": ["Python", "gurobipy"],
+      "links": []
+    },
+    {
+      "slug": "chinese-aspect-quiz",
+      "title": "現代漢語語法測驗",
+      "summary": "為了準備語法考試做的互動測驗網頁，141 題涵蓋「了、著、過」、把字句、被字句等主題，可重練錯題。",
+      "period": "2026 春",
+      "role": "個人專案",
+      "status": "done",
+      "tags": ["education", "frontend"],
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "links": []
+    }
+  ]
+}
